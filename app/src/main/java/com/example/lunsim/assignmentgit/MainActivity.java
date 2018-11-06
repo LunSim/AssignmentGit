@@ -3,6 +3,7 @@ package com.example.lunsim.assignmentgit;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import com.example.lunsim.assignmentgit.Model.Message;
 public class MainActivity extends AppCompatActivity {
     Button Send;
     EditText sender,reciever,mess,dated;
+    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 //create object bundle
                 Bundle b = new Bundle();
                 b.putParcelable("data",message);
+                Log.e(TAG, "onClick: "+message.toString() );
                 intent.putExtras(b);
                 startActivity(intent);
             }
