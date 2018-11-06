@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecieveActivity"></activity>
+        <activity android:name=".RecieveActivity" />
+        <activity android:name=".kikiActivity"></activity>
     </application>
 
 </manifest>
